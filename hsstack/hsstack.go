@@ -16,7 +16,7 @@ func main() {
 	}
 	pid, err := strconv.Atoi(os.Args[1])
 	if err != nil {
-		log.Fatal("invalid pid: %v", err)
+		log.Fatalf("invalid pid: %v", err)
 	}
 	sock, err := attach.New(pid)
 	if err != nil {
